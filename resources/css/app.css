@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+/*  */
+
+/* guest cast */
+.field {
+    position: relative;
+    top: 33%;
+    background-color: rgba(255, 170, 91, 0.3);
+    height: auto;
+    width: 100%;
+    /* display: flex; */
+    justify-content: center;
+}
