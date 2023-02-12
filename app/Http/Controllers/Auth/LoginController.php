@@ -43,8 +43,13 @@ class LoginController extends Controller
     {
         $input = $request->all();
         $this->validate($request,['email'=>'required|email','password'=>'required']);
-        if (auth()) {
-            # code...
+        if (auth()->attempt(['email'=>$input["email"],'password'=>$input["password"]])) {
+            if(auth()->user()->role == 'admin'){
+                return redirect()->route('home.admin');
+            }
+        }
+        else{
+            return redirect()->route('login')->with("error", "incorect username or password!");
         }
     }
 }
