@@ -22,6 +22,6 @@ class userLogin
 
             return $next($request);
         }
-        return response()->json(["Pengunjung tidak mempunyai hak untu kesini!"]);
+        return redirect('login')->withErrors('silakan login terlebih dahulu');
     }
 }

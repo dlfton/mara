@@ -27,7 +27,7 @@ class HomeController extends Controller
     }
     public function adminHome()
     {
-        return view('frontend.index',["msg"=>"admin page"]);
+        return view('admin.dashboard',["msg"=>"admin page"]);
     }
     
 

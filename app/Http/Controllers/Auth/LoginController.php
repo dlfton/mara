@@ -44,8 +44,14 @@ class LoginController extends Controller
         $input = $request->all();
         $this->validate($request,['email'=>'required|email','password'=>'required']);
         if (auth()->attempt(['email'=>$input["email"],'password'=>$input["password"]])) {
+            // if(auth()->user()->role == 'member'){
+            //     return redirect()->route('home.member');
+            // }
             if(auth()->user()->role == 'admin'){
                 return redirect()->route('home.admin');
+            }
+            else{
+                return redirect()->route('home.member');
             }
         }
         else{

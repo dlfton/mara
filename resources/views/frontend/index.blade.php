@@ -8,18 +8,13 @@
                     <div class="card-header">{{ __('Member Page') }}</div>
 
                     <div class="card-body">
-                        @guest
-                            @if (session('status'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ session('status') }}
-                                </div>
-                                <h2>ini udah login member</h2>
-                                <p>{{ $msg }}</p>
-                                {{ __('You are logged in!') }}
-                            @else
-                                <h2>ini belum login member</h2>
-                            @endif
-                        @endguest
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        {{ __('You are logged in!') }}
                     </div>
                 </div>
             </div>

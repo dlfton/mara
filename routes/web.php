@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.index');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -25,7 +25,7 @@ Auth::routes();
 
 // user route
 Route::middleware(['auth', 'user-role:user'])->group(function () {
-    Route::get("/home", [HomeController::class, 'userHome'])->name('home');
+    Route::get("/member/home", [HomeController::class, 'userHome'])->name('home.member');
 });
 
 // admin route
