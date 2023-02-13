@@ -8,16 +8,16 @@
                     <div class="card-body">
                         <form action="{{ route('register') }}" method="post">
                             @csrf
-
+                            <h2 class="text-center fw-bold">Register</h2>
                             {{-- full name --}}
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="loginName">Full Name</label>
                                 <input type="text" id="loginName"
-                                    class="form-control @error('name') is-invalid @enderror" name="name"
+                                    class="form-control @error('name')is-invalid @enderror" name="name"
                                     value="{{ old('name') }}" required autocomplete="name" autofocus />
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -27,7 +27,7 @@
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="loginName">email</label>
                                 <input type="email" id="loginName"
-                                    class="form-control @error('email') is-invalid @enderror" name="email"
+                                    class="form-control @error('email')is-invalid @enderror" name="email"
                                     value="{{ old('email') }}" required autocomplete="email" />
 
                                 @error('email')

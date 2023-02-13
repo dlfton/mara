@@ -8,14 +8,14 @@
 
     {{-- CRSF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Document</title>
+    <title>Marahobina Store</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand fw-bold" href="{{ url('/') }}">
                 Marahobina
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -66,32 +66,34 @@
     </nav>
     <div class="container py-5">
         {{-- main content --}}
-        <div class="row mt-4">
-            <div class="col-6 align-self-center">
-                <h1><b>The Most Complete Place To Meet Hobbyist Needs</b></h1>
-                <a href="" class="btn btn-dark text-primary rounded-pill">Buy Now!</a>
+        <div class="field p-4">
+            <div class="row mt-4">
+                <div class="col-6 align-self-center">
+                    <h1><b>The Most Complete Place To Meet Hobbyist Needs</b></h1>
+                    <a href="" class="btn btn-dark text-primary rounded-pill">Buy Now!</a>
+                </div>
+                <div class="col-6 align-self-end"><img src="{{ asset('./img/eva-01.svg') }}" alt="eva-01"></div>
             </div>
-            <div class="col-6 align-self-center"><img src="{{ asset('./img/eva-01.svg') }}" alt="eva-01"></div>
         </div>
 
         {{-- section catagories --}}
         <section id="kategori" class="my-5">
-            <div class="field p-4">
-                <h1 class="text-center text-primary fw-bold mb-5">Categories</h1>
 
-                <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-between">
-                    <div class="col">
-                        <a href=""><img src="{{ asset('./img/kt-1.svg') }}" class="card-img-top" alt="nendroid"></a>
-                    </div>
-                    <div class="col">
-                            <a href=""><img src="{{ asset('./img/kt-2.svg') }}" class="card-img-top" alt=""></a>
-                    </div>
-                    <div class="col">
-                            <a href=""><img src="{{ asset('./img/kt-3.svg') }}" class="card-img-top" alt=""></a>
-                    </div>
+            <h1 class="text-center text-primary fw-bold mb-5">Categories</h1>
+
+            <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-between">
+                <div class="col">
+                    <a href=""><img src="{{ asset('./img/kt-1.svg') }}" class="card-img-top" alt="nendroid"></a>
                 </div>
-
+                <div class="col">
+                    <a href=""><img src="{{ asset('./img/kt-2.svg') }}" class="card-img-top" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href=""><img src="{{ asset('./img/kt-3.svg') }}" class="card-img-top" alt=""></a>
+                </div>
             </div>
+
+
         </section>
 
         {{-- section req order --}}

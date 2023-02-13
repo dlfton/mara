@@ -7,7 +7,7 @@
 .field {
     position: relative;
     top: 33%;
-    background-color: rgba(255, 170, 91, 0.3);
+    background-color: rgba(244, 74, 74, 10%);
     height: auto;
     width: 100%;
     /* display: flex; */
