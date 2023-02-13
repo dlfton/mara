@@ -13,3 +13,13 @@
     /* display: flex; */
     justify-content: center;
 }
+.field-ftr{
+    text-align: center;
+    position: relative;
+    top: 33%;
+    background-color: #161825;
+    height: auto;
+    width: 100%;
+    /* display: flex; */
+    justify-content: center;
+}

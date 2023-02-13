@@ -9,6 +9,7 @@
     {{-- CRSF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Marahobina Store</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
 
@@ -64,7 +65,7 @@
             </div>
         </div>
     </nav>
-    <div class="container py-5">
+    <div class="container py-2">
         {{-- main content --}}
         <div class="field p-4">
             <div class="row mt-4">
@@ -113,17 +114,87 @@
                 </form>
             </div>
 
+            {{-- barang --}}
+            <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
+                <div class="col">
+                    <div class="card p-2">
+                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
+                            height="200" class="card-img-top mb-2">
+                        {{-- <div class="card-body"> --}}
+                            <h3 class="fw-bold">PVC</h3>
+                            <p>Harga</p>
+                            <div class="d-grid gap-2">
+                                <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                            </div>
+                        {{-- </div> --}}
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-2">
+                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
+                            height="200" class="card-img-top mb-2">
+                        {{-- <div class="card-body"> --}}
+                            <h3 class="fw-bold">PVC</h3>
+                            <p>Harga</p>
+                            <div class="d-grid gap-2">
+                                <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                            </div>
+                        {{-- </div> --}}
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-2">
+                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
+                            height="200" class="card-img-top mb-2">
+                        {{-- <div class="card-body"> --}}
+                            <h3 class="fw-bold">PVC</h3>
+                            <p>Harga</p>
+                            <div class="d-grid gap-2">
+                                <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                            </div>
+                        {{-- </div> --}}
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card p-2">
+                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
+                            height="200" class="card-img-top mb-2">
+                        {{-- <div class="card-body"> --}}
+                            <h3 class="fw-bold">PVC</h3>
+                            <p>Harga</p>
+                            <div class="d-grid gap-2">
+                                <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                            </div>
+                        {{-- </div> --}}
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         {{-- section footer --}}
         <section id="ftr">
-            <h1 class="fw-bold">Marahobina. We're Here!</h1>
-            <p>Contact Us:</p>
-            <div class="flex">
-                <p>WhatsApp</p>
-                <p>Instagram</p>
+            <div class="field-ftr p-5">
+                <h1 class="fw-bold text-primary">Marahobina. We're Here!</h1>
+                <p class="text-white">Contact Us:</p>
+                <div class="flex">
+                    <a href=""><i class='bx bxl-instagram' style="font-size: 2rem"></i></a>
+                    <a href=""><i class='bx bxl-whatsapp' style="font-size: 2rem"></i></a>
+                </div>
+                <p class="text-white">copyright &copy; {{ date('Y') }} Marahobina</p>
+
+                <div class="d-flex justify-content-end">
+                    {{-- <div class="form-check align-self-center">
+                        <input class="form-check-input" type="checkbox" value="" id="loginCheck"
+                            {{ old('remember') ? 'checked' : '' }} />
+                        <label class="form-check-label" for="loginCheck"> {{ __('Remember Me') }} </label>
+                    </div> --}}
+                    <div class="m-0">
+                        <a href="#" class="me-5 text-decoration-none text-white">terms and service</a>
+                        <a href="#" class="text-decoration-none text-white">privacy policy</a>
+                    </div>
+                </div>
             </div>
-            <p>copyright &copy; {{ date('Y') }} Marahobina</p>
         </section>
         {{-- end container --}}
     </div>
