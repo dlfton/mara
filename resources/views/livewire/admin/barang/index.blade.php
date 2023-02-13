@@ -33,7 +33,7 @@
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->status == '1' ? 'ada' : 'hidden' }}</td>
                                 <td>
-                                    <a href="{{ url('admin/barang/'.$item->id.'/edit') }}" class="btn btn-success">edit</a>
+                                    <a href="{{ url('kategori/'.$item->id.'/edit') }}" class="btn btn-success">edit</a>
                                     <a href="" class="btn btn-danger">delete</a>
                                 </td>
                             </tr>
