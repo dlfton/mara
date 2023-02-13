@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\admin\CategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,13 @@ Route::middleware(['auth', 'user-role:user'])->group(function () {
 
 // admin route
 Route::middleware(['auth', 'user-role:admin'])->group(function () {
+    // index
     Route::get("/admin/home", [HomeController::class, 'adminHome'])->name('home.admin');
+
+    // category
+    Route::get("kategori/admin", [CategoryController::class, 'index'])->name('kategori.admin');
+    Route::get("kategori/create", [CategoryController::class, 'create'])->name('kategori.create.admin');
+    Route::get("kategori/{item}/edit", [CategoryController::class, 'edit'])->name('kategori.edit.admin');
+    
+    Route::post("kategori/admin", [CategoryController::class, 'tambah']);
 });
