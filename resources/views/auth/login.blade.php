@@ -9,16 +9,20 @@
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
                             <h2 class="text-center fw-bold">LOGIN</h2>
+                            @if (Session::has('error'))
+                                <div class="alert alert-danger">
+                                    {{ Session::get('error') }}
+                                </div>
+                            @endif
                             {{-- email address --}}
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="loginName">email</label>
                                 <input type="email" id="loginName"
                                     class="form-control @error('email')is-invalid @enderror" name="email"
                                     value="{{ old('email') }}" required autocomplete="email" />
-
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $error }}</strong>
+                                        <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
