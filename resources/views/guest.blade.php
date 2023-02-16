@@ -71,7 +71,7 @@
             <div class="row mt-4">
                 <div class="col-6 align-self-center">
                     <h1><b>The Most Complete Place To Meet Hobbyist Needs</b></h1>
-                    <a href="" class="btn btn-dark text-primary rounded-pill">Buy Now!</a>
+                    <a href="#barang" class="btn btn-dark text-primary rounded-pill">Buy Now!</a>
                 </div>
                 <div class="col-6 align-self-end"><img src="{{ asset('./img/eva-01.svg') }}" alt="eva-01"></div>
             </div>
@@ -115,7 +115,7 @@
             </div>
 
             {{-- barang --}}
-            <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
+            <div class="row row-cols-1 row-cols-md-4 g-4 mb-4" id="barang">
                 <div class="col">
                     <div class="card p-2">
                         <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
