@@ -36,10 +36,22 @@
                                     </span>
                                 @enderror
                             </div>
-
                             {{-- phone --}}
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="loginName">Phone</label>
+                                <label class="form-label" for="loginName">Alamat</label>
+                                <input type="text" id="loginName"
+                                    class="form-control @error('alamat') is-invalid @enderror" name="alamat"
+                                    value="{{ old('alamat') }}" required autocomplete="name" autofocus />
+
+                                @error('alamat')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            {{-- phone --}}
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="loginName">No Telpon</label>
                                 <input type="number" id="loginName"
                                     class="form-control @error('phone') is-invalid @enderror" name="phone"
                                     value="{{ old('phone') }}" required autocomplete="name" autofocus />

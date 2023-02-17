@@ -22,6 +22,7 @@ class userSeed extends Seeder
                 'email'=>'fathon626@gmail.com',
                 'phone'=>'081290904081',
                 'password'=>bcrypt('admin1234'),
+                'alamat'=>'tangerang selatan',
                 'role'=>1
             ],
             [
@@ -29,6 +30,7 @@ class userSeed extends Seeder
                 'email'=>'Nuzul@gmail.com',
                 'phone'=>'081290907660',
                 'password'=>bcrypt('admin1234'),
+                'alamat'=>'tangerang selatan',
                 'role'=> 0
             ]
         ];
