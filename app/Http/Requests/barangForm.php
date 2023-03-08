@@ -24,13 +24,13 @@ class barangForm extends FormRequest
     public function rules()
     {
         return [
-            'name'=>['required', 'string'],
-            'slug'=>['required', 'string'],
-            'desc'=>['required'],
+            'nama'=>['required', 'string'],
+            'kategori_id'=>['required'],
+            'anime'=>['required', 'string'],
+            'harga'=>['required', 'string'],
             'image'=>['nullable', 'mimes:jpg, jpeg, png'],
-            'meta_title'=>['required', 'string'],
-            'meta_keyword'=>['required'],
-            'meta_desc'=>['required'],
+            'estimasi'=>['required'],
+            'desc'=>['required'],
         ];
     }
 }

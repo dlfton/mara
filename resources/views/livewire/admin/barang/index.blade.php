@@ -12,7 +12,7 @@
                         <h1 class="app-page-title"></i> &nbsp;Barang</h1>
                     </div>
                     <div class="col-6 text-end">
-                        <a href="{{ route('kategori.create.admin') }}" class="btn btn-primary"><i
+                        <a href="{{ route('barang.tambah') }}" class="btn btn-primary"><i
                                 class="fa-regular fa-square-plus"></i>&nbsp;Tambah Barang</a>
                     </div>
                 </div>
@@ -27,13 +27,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($kategori as $item)
+                        @foreach ($barang as $item)
                             <tr>
                                 <td>{{ $item->id }}</td>
-                                <td>{{ $item->name }}</td>
+                                <td>{{ $item->nama }}</td>
                                 <td>{{ $item->status == '1' ? 'ada' : 'hidden' }}</td>
                                 <td>
-                                    <a href="{{ url('kategori/'.$item->id.'/edit') }}" class="btn btn-success">edit</a>
+                                    <a href="{{ url('barang/'.$item->id.'/edit') }}" class="btn btn-success">edit</a>
                                     <a href="" class="btn btn-danger">delete</a>
                                 </td>
                             </tr>
@@ -41,7 +41,7 @@
                     </tbody>
                 </table>
                 <div class="">
-                    {{ $kategori->links() }}
+                    {{ $barang->links() }}
                 </div>
             </div>
         </div>

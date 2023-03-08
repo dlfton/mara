@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Admin\Barang;
 
-use App\Models\kategori;
+use App\Models\admin\Barang;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -12,8 +12,8 @@ class Index extends Component
     protected $paginationTheme = 'bootstrap';
     public function render()
     {
-        $ket = kategori::orderBy('id','ASC')->paginate(2);
+        $bara = Barang::orderBy('id','ASC')->paginate(2);
 
-        return view('livewire.admin.barang.index',['kategori'=>$ket]);
+        return view('livewire.admin.barang.index',['barang'=>$bara]);
     }
 }
