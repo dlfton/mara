@@ -17,20 +17,24 @@
                     </div>
                 </div>
                 {{-- datatables --}}
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped text-center">
                     <thead>
                         <tr>
+                            <th>NO</th>
                             <th>Kode Barang</th>
                             <th>Nama Barang</th>
+                            <th>estimasi Barang</th>
                             <th>Status Barang</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($barang as $item)
+                        @foreach ($barang as $index => $item)
                             <tr>
+                                <td>{{ $index +1 }}</td>
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->nama }}</td>
+                                <td>{{ $item->estimasi }}</td>
                                 <td>{{ $item->status == '1' ? 'ada' : 'hidden' }}</td>
                                 <td>
                                     <a href="{{ url('barang/'.$item->id.'/edit') }}" class="btn btn-success">edit</a>
