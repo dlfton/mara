@@ -27,7 +27,7 @@ class HomeController extends Controller
     }
     public function adminHome()
     {
-        return view('admin.barang.index',["msg"=>"admin page"]);
+        return view('admin.barang.index',["msg"=>"admin page", "title"=>"barang admin"]);
     }
     
 
