@@ -82,8 +82,10 @@ class barangController extends Controller
 
         return redirect('admin/home')->with('msg', 'data telah diupdate!');
     }
-    public function delete()
+    public function destroy($item)
     {
-        // # code...
+        $data = Barang::find($item);
+        $data->delete();
+        return redirect('admin/home')->with('msg', 'data telah dihapus!');
     }
 }

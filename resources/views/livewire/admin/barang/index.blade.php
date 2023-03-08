@@ -38,9 +38,14 @@
                                 <td>{{ $item->kategori->kategori_id }}</td>
                                 <td>{{ $item->estimasi }}</td>
                                 <td>{{ $item->status == '1' ? 'ada' : 'hidden' }}</td>
-                                <td>
+                                <td class="d-flex gap-2 justify-content-center">
                                     <a href="{{ url('barang/'.$item->id.'/edit') }}" class="btn btn-success">edit</a>
-                                    <a href="" class="btn btn-danger">delete</a>
+                                    {{-- <a href="" class="btn btn-danger">delete</a> --}}
+                                    <form action="{{ url('admin/'.$item->id) }}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

@@ -42,6 +42,7 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     
     Route::post("admin/home", [barangController::class, 'add']);
     Route::put('admin/{item}', [barangController::class, 'update']);
+    Route::delete('admin/{item}',[barangController::class, 'destroy']);
 
     // category
     // Route::get("kategori/admin", [CategoryController::class, 'index'])->name('kategori.admin');
