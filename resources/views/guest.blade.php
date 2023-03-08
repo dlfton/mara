@@ -118,14 +118,14 @@
             <div class="row row-cols-1 row-cols-md-4 g-4 mb-4" id="barang">
                 <div class="col">
                     <div class="card p-2">
-                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
-                            height="200" class="card-img-top mb-2">
+                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50" height="200"
+                            class="card-img-top mb-2">
                         {{-- <div class="card-body"> --}}
-                            <h3 class="fw-bold">PVC</h3>
-                            <p>Harga</p>
-                            <div class="d-grid gap-2">
-                                <a href="" class="btn btn-primary text-white">Pre-Order</a>
-                            </div>
+                        <h3 class="fw-bold">PVC</h3>
+                        <p>Harga</p>
+                        <div class="d-grid gap-2">
+                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                        </div>
                         {{-- </div> --}}
                     </div>
                 </div>
@@ -134,11 +134,11 @@
                         <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
                             height="200" class="card-img-top mb-2">
                         {{-- <div class="card-body"> --}}
-                            <h3 class="fw-bold">PVC</h3>
-                            <p>Harga</p>
-                            <div class="d-grid gap-2">
-                                <a href="" class="btn btn-primary text-white">Pre-Order</a>
-                            </div>
+                        <h3 class="fw-bold">PVC</h3>
+                        <p>Harga</p>
+                        <div class="d-grid gap-2">
+                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                        </div>
                         {{-- </div> --}}
                     </div>
                 </div>
@@ -147,11 +147,11 @@
                         <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
                             height="200" class="card-img-top mb-2">
                         {{-- <div class="card-body"> --}}
-                            <h3 class="fw-bold">PVC</h3>
-                            <p>Harga</p>
-                            <div class="d-grid gap-2">
-                                <a href="" class="btn btn-primary text-white">Pre-Order</a>
-                            </div>
+                        <h3 class="fw-bold">PVC</h3>
+                        <p>Harga</p>
+                        <div class="d-grid gap-2">
+                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                        </div>
                         {{-- </div> --}}
                     </div>
                 </div>
@@ -160,11 +160,11 @@
                         <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
                             height="200" class="card-img-top mb-2">
                         {{-- <div class="card-body"> --}}
-                            <h3 class="fw-bold">PVC</h3>
-                            <p>Harga</p>
-                            <div class="d-grid gap-2">
-                                <a href="" class="btn btn-primary text-white">Pre-Order</a>
-                            </div>
+                        <h3 class="fw-bold">PVC</h3>
+                        <p>Harga</p>
+                        <div class="d-grid gap-2">
+                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                        </div>
                         {{-- </div> --}}
                     </div>
                 </div>
