@@ -23,17 +23,19 @@
                             <th>NO</th>
                             <th>Kode Barang</th>
                             <th>Nama Barang</th>
+                            <th>Kategori</th>
                             <th>estimasi Barang</th>
                             <th>Status Barang</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($barang as $index => $item)
+                        @foreach ($barang as $item)
                             <tr>
-                                <td>{{ $index +1 }}</td>
+                                <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->nama }}</td>
+                                <td>{{ $item->kategori->kategori_id }}</td>
                                 <td>{{ $item->estimasi }}</td>
                                 <td>{{ $item->status == '1' ? 'ada' : 'hidden' }}</td>
                                 <td>

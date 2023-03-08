@@ -37,10 +37,11 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
 
     // barang
     Route::get("barang/tambah", [barangController::class, 'tambah'])->name('barang.tambah');
+    Route::get("barang/{item}/edit", [barangController::class, 'edit'])->name('barang.edit');
     
     
     Route::post("admin/home", [barangController::class, 'add']);
-
+    Route::put('admin/{item}', [barangController::class, 'update']);
 
     // category
     // Route::get("kategori/admin", [CategoryController::class, 'index'])->name('kategori.admin');

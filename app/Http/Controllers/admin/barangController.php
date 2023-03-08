@@ -7,6 +7,7 @@ use App\Http\Requests\barangForm;
 use App\Models\admin\Barang;
 use App\Models\admin\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class barangController extends Controller
 {
@@ -43,13 +44,43 @@ class barangController extends Controller
         $ket = kategori::all();
         return view('admin.barang.tambah', compact('ket'));
     }
-    public function edit()
+    public function edit(Barang $item)
     {
-        // # code...
+        $ket = kategori::all();
+        return view('admin.barang.edit', compact('item','ket'));
     }
-    public function update()
+    public function update(barangForm $request, $item)
     {
-        // # code...
+        $valid = $request->validated();
+        $item = Barang::findOrFail($item);
+
+        $item->nama = $valid['nama'];
+        $item->kategori_id = $valid['kategori_id'];
+        $item->anime = $valid['anime'];
+        $item->harga = $valid['harga'];
+
+        if ($request->hasFile('image')) {
+
+            $path = 'uploads/category/' . $item->image;
+            if (File::exists($path)) {
+                File::delete($path);
+            }
+
+            $file = $request->file('image');
+
+            $ext = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $ext;
+            $file->move('uploads/barang/', $filename);
+            $item->image = $filename;
+        }
+
+        $item->status = $request->status == true ? '1' : '0';
+        $item->estimasi = $valid['estimasi'];
+        $item->desc = $valid['desc'];
+
+        $item->update();
+
+        return redirect('admin/home')->with('msg', 'data telah diupdate!');
     }
     public function delete()
     {

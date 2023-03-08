@@ -21,4 +21,9 @@ class Barang extends Model
         'estimasi',
         'desc',
     ];
+
+    public function kategori()
+    {
+        return $this->belongsTo('App\Models\admin\Kategori');
+    }
 }
