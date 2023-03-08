@@ -39,7 +39,7 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     Route::get("kategori/create", [CategoryController::class, 'create'])->name('kategori.create.admin');
     Route::get("kategori/{item}/edit", [CategoryController::class, 'edit'])->name('kategori.edit.admin');
     
-    Route::post("kategori/admin", [CategoryController::class, 'tambah']);
+    // Route::post("kategori/admin", [CategoryController::class, 'tambah']);
 
-    Route::put('kategori/{item}', [CategoryController::class, 'update']);
+    // Route::put('kategori/{item}', [CategoryController::class, 'update']);
 });

@@ -14,11 +14,11 @@ class CategoryController extends Controller
     //
     public function index()
     {
-        return view('admin.barang.index');
+        // return view('admin.barang.index');
     }
     public function create()
     {
-        return view('admin.barang.create');
+        // return view('admin.barang.create');
     }
     public function tambah(barangForm $request)
     {
@@ -51,7 +51,7 @@ class CategoryController extends Controller
 
     public function edit(kategori $item)
     {
-        return view('admin.barang.edit', compact('item'));
+        // return view('admin.barang.edit', compact('item'));
     }
 
     public function update(barangForm $request, $item)
@@ -86,6 +86,6 @@ class CategoryController extends Controller
 
         $item->update();
 
-        return redirect('kategori/admin')->with('msg', 'data telah diupdate!');
+        // return redirect('kategori/admin')->with('msg', 'data telah diupdate!');
     }
 }
