@@ -12,7 +12,7 @@ class Index extends Component
     protected $paginationTheme = 'bootstrap';
     public function render()
     {
-        $bara = Barang::orderBy('id','ASC')->paginate(2);
+        $bara = Barang::orderBy('id','ASC')->paginate(10);
 
         return view('livewire.admin.barang.index',['barang'=>$bara]);
     }
