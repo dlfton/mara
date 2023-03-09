@@ -12,7 +12,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
-
+@livewireScripts
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container-fluid">
@@ -106,71 +106,7 @@
         </section>
 
         {{-- section barang --}}
-        <section id="brng">
-            <div class="col-4 offset-8 py-5">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
-                </form>
-            </div>
-
-            {{-- barang --}}
-            <div class="row row-cols-1 row-cols-md-4 g-4 mb-4" id="barang">
-                <div class="col">
-                    <div class="card p-2">
-                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50" height="200"
-                            class="card-img-top mb-2">
-                        {{-- <div class="card-body"> --}}
-                        <h3 class="fw-bold">PVC</h3>
-                        <p>Harga</p>
-                        <div class="d-grid gap-2">
-                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
-                        </div>
-                        {{-- </div> --}}
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-2">
-                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
-                            height="200" class="card-img-top mb-2">
-                        {{-- <div class="card-body"> --}}
-                        <h3 class="fw-bold">PVC</h3>
-                        <p>Harga</p>
-                        <div class="d-grid gap-2">
-                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
-                        </div>
-                        {{-- </div> --}}
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-2">
-                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
-                            height="200" class="card-img-top mb-2">
-                        {{-- <div class="card-body"> --}}
-                        <h3 class="fw-bold">PVC</h3>
-                        <p>Harga</p>
-                        <div class="d-grid gap-2">
-                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
-                        </div>
-                        {{-- </div> --}}
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card p-2">
-                        <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50"
-                            height="200" class="card-img-top mb-2">
-                        {{-- <div class="card-body"> --}}
-                        <h3 class="fw-bold">PVC</h3>
-                        <p>Harga</p>
-                        <div class="d-grid gap-2">
-                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
-                        </div>
-                        {{-- </div> --}}
-                    </div>
-                </div>
-            </div>
-
-        </section>
+        <livewire:guest.page />
 
         {{-- section footer --}}
         <section id="ftr">
@@ -198,6 +134,7 @@
         </section>
         {{-- end container --}}
     </div>
+    @livewireScripts
 </body>
 
 </html>
