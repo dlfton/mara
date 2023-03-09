@@ -91,6 +91,19 @@
                                     </span>
                                 @enderror
                             </div>
+                            {{-- jumlah --}}
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="loginName">jumlah</label>
+                                <input type="number" id="loginName"
+                                    class="form-control @error('jumlah')is-invalid @enderror" name="jumlah"
+                                    value="{{ $item->jumlah }}" required autocomplete="jumlah" autofocus />
+
+                                @error('jumlah')
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                             {{-- gambar --}}
                             <div class="form-outline mb-4 col-8">
                                 <label class="form-label" for="loginName">Gambar Barang</label>

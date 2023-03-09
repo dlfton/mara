@@ -20,6 +20,7 @@ class barangController extends Controller
         $product->kategori_id = $valid['kategori_id'];
         $product->anime = $valid['anime'];
         $product->harga = $valid['harga'];
+        $product->harga = $valid['jumlah'];
 
         if ($request->hasFile('gambar')) {
             $file = $request->file('gambar');
@@ -58,6 +59,7 @@ class barangController extends Controller
         $item->kategori_id = $valid['kategori_id'];
         $item->anime = $valid['anime'];
         $item->harga = $valid['harga'];
+        $item->harga = $valid['jumlah'];
 
         if ($request->hasFile('image')) {
 

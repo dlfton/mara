@@ -21,6 +21,7 @@ class barangSeed extends Seeder
             'kategori_id'=>'2',
             'anime'=>'Sword Art Online',
             'harga'=>40000,
+            'jumlah'=>1,
             'gambar'=>'',
             'status'=>'1',
             'estimasi'=> '2023-03-24',

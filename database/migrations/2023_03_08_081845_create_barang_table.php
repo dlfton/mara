@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('kategori_id')->constrained('kategori');
             $table->string('anime');
             $table->string('harga');
+            $table->integer('jumlah');
             $table->string('gambar')->nullable();
             $table->tinyInteger('status')->default('0')->comment('0=ilang,1=muncul');
 

@@ -16,6 +16,7 @@ class Barang extends Model
         'kategori_id',
         'anime',
         'harga',
+        'jumlah',
         'gambar',
         'status',
         'estimasi',
