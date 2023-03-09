@@ -9,18 +9,18 @@
 
         {{-- barang --}}
         <div class="row row-cols-1 row-cols-md-4 g-4 mb-4" id="barang">
-                @foreach ($barang as $a)
+                @foreach ($barang as $item)
                 <div class="col">
                     <div class="card p-2">
                         {{-- <img src="{{ asset('img/kirito-Preorder.jpg') }}" alt="" width="50" height="200" class="card-img-top mb-2"> --}}
-                        <img src="{{ asset('uploads/barang/'.$a->gambar) }}" alt="" width="50" height="200" class="card-img-top mb-2">
+                        <img src="{{ asset('uploads/barang/'.$item->gambar) }}" alt="" width="50" height="200" class="card-img-top mb-2">
                         {{-- <div class="card-body"> --}}
-                        <h3 class="fw-bold">{{ $a->nama }}</h3>
-                        <p>IDR. {{ $a->harga }}</p>
-                        <p>Jumlah: {{ $a->jumlah }}</p>
-                        <p>{{ $a->estimasi }}</p>
+                        <h3 class="fw-bold">{{ $item->nama }}</h3>
+                        <p>IDR. {{ $item->harga }}</p>
+                        <p>Jumlah: {{ $item->jumlah }}</p>
+                        <p>{{ $item->estimasi }}</p>
                         <div class="d-grid gap-2">
-                            <a href="" class="btn btn-primary text-white">Pre-Order</a>
+                            <a href="{{ url('product/'. $item->id) }}" class="btn btn-primary text-white">Pre-Order</a>
                         </div>
                         {{-- </div> --}}
                     </div>

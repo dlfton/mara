@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\admin\Barang;
+use App\Models\admin\Kategori;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,6 +31,8 @@ class HomeController extends Controller
     {
         return view('admin.barang.index',["msg"=>"admin page", "title"=>"barang admin"]);
     }
-    
-
+    public function show(Barang $item)
+    {
+        return view('frontend.view', ['item' => $item]);
+    }
 }
