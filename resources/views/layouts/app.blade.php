@@ -23,10 +23,15 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 @guest
-                @else
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                @if(Route::has('login'))
+                    <a class="navbar-brand" href="{{ url('/member/home') }}">
                         Marahobina
                     </a>
+                @endif
+                @else
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    Marahobina
+                </a>
                 @endguest
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -44,6 +49,12 @@
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}" class=""><button
+                                        class="btn btn-primary text-white">Login</button></a>
+                            </li>
+                        @endif
                             {{-- @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
