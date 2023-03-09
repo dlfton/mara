@@ -16,7 +16,8 @@
                         <img src="{{ asset('uploads/barang/'.$a->gambar) }}" alt="" width="50" height="200" class="card-img-top mb-2">
                         {{-- <div class="card-body"> --}}
                         <h3 class="fw-bold">{{ $a->nama }}</h3>
-                        <p>{{ $a->harga }}</p>
+                        <p>IDR. {{ $a->harga }}</p>
+                        <p>Jumlah: {{ $a->jumlah }}</p>
                         <p>{{ $a->estimasi }}</p>
                         <div class="d-grid gap-2">
                             <a href="" class="btn btn-primary text-white">Pre-Order</a>
