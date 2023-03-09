@@ -110,7 +110,7 @@
                                 <input type="file" id="loginName"
                                     class="form-control @error('gambar')is-invalid @enderror" name="gambar"
                                     autocomplete="gambar" autofocus /> <br />
-                                <img src="{{ asset('/uploads/category/' . $item->gambar) }}" alt="" width="200"
+                                <img src="{{ asset('/uploads/barang/' . $item->gambar) }}" alt="" width="200"
                                     height="150" />
 
                                 @error('gambar')
@@ -124,7 +124,7 @@
                                 <label class="form-label" for="loginName">Status Barang</label>
                                 <input type="checkbox" id="loginName" name="status" {{ $item->status == '1' ? 'checked':'' }} />
                                 <br />
-                                <div class="form-text">lorem ipsum tidak berguna</div>
+                                <div class="form-text">unchecklist : hidden | checklist : visible</div>
                             </div>
                             {{-- Estimasi --}}
                             <div class="form-outline mb-4">

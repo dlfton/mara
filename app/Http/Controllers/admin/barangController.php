@@ -61,19 +61,19 @@ class barangController extends Controller
         $item->harga = $valid['harga'];
         $item->jumlah = $valid['jumlah'];
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('gambar')) {
 
-            $path = 'uploads/category/' . $item->image;
+            $path = 'uploads/category/' . $item->gambar;
             if (File::exists($path)) {
                 File::delete($path);
             }
 
-            $file = $request->file('image');
+            $file = $request->file('gambar');
 
             $ext = $file->getClientOriginalExtension();
             $filename = time() . '.' . $ext;
             $file->move('uploads/barang/', $filename);
-            $item->image = $filename;
+            $item->gambar = $filename;
         }
 
         $item->status = $request->status == true ? '1' : '0';
