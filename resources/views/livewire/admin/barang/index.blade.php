@@ -24,6 +24,7 @@
                             <th>Kode Barang</th>
                             <th>Nama Barang</th>
                             <th>Kategori</th>
+                            <th>Jumlah</th>
                             <th>estimasi Barang</th>
                             <th>Status Barang</th>
                             <th>Action</th>
@@ -36,6 +37,7 @@
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->kategori->kategori_id }}</td>
+                                <td>{{ $item->jumlah }}</td>
                                 <td>{{ $item->estimasi }}</td>
                                 <td>{{ $item->status == '1' ? 'ada' : 'hidden' }}</td>
                                 <td class="d-flex gap-2 justify-content-center">

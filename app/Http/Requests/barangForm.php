@@ -28,7 +28,7 @@ class barangForm extends FormRequest
             'kategori_id'=>['required'],
             'anime'=>['required', 'string'],
             'harga'=>['required', 'string'],
-            'harga'=>['required'],
+            'jumlah'=>['required'],
             'image'=>['nullable', 'mimes:jpg, jpeg, png'],
             'estimasi'=>['required'],
             'desc'=>['required'],
