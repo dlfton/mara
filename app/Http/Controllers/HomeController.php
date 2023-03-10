@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\userForm;
 use App\Models\admin\Barang;
 use App\Models\admin\Kategori;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -54,6 +57,21 @@ class HomeController extends Controller
     // account
     public function accountMember()
     {
-        return view('frontend.account.account');
+        return view('frontend.account.account')->with('user', auth()->user());
+    }
+    public function accountUpdate(Request $request){
+        $request->validate([
+            'name' =>'required|min:4|string|max:255',
+            'email'=>'required|email|string|max:255',
+            'phone' =>'required|min:4|string|max:255',
+            'alamat' =>'required|min:4|string|max:255',
+        ]);
+        $user =Auth::user();
+        $user->name = $request['name'];
+        $user->email = $request['email'];
+        $user->phone = $request['phone'];
+        $user->alamat = $request['alamat'];
+        $user->save();
+        return back()->with('msg','Profile Updated');
     }
 }

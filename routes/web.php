@@ -31,8 +31,16 @@ Route::middleware(['auth', 'user-role:user'])->group(function () {
     Route::get("/member/home", [HomeController::class, 'userHome'])->name('home.member');
 
     Route::get("/member/cart", [HomeController::class, 'cartMember'])->name('cart.member');
+
+
     Route::get("/member/transaction", [HomeController::class, 'transactionMember'])->name('transaction.member');
+
+
     Route::get("/member/account", [HomeController::class, 'accountMember'])->name('account.member');
+
+
+    Route::put("/member/account", [HomeController::class, 'accountUpdate'])->name('update.member');
+
 });
 
 // admin route
