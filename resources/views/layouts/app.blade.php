@@ -75,9 +75,16 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ Route('account.member') }}">
+                                        {{ __('Account') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ Route('transaction.member') }}">
+                                        {{ __('Transaction') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ Route('cart.member') }}">
                                         {{ __('Cart') }}
                                     </a>
+                                    <hr>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

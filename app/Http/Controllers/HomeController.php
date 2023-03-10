@@ -31,12 +31,29 @@ class HomeController extends Controller
     {
         return view('admin.barang.index',["msg"=>"admin page", "title"=>"barang admin"]);
     }
+
+    // view
     public function show(Barang $item)
     {
         return view('frontend.view', ['item' => $item]);
     }
+
+
+    // cart
     public function cartMember()
     {
-        return view('frontend.cart');
+        return view('frontend.cart.cart');
+    }
+
+    // transaksi
+    public function transactionMember()
+    {
+        return view('frontend.transaction.transaction');
+    }
+
+    // account
+    public function accountMember()
+    {
+        return view('frontend.account.account');
     }
 }
