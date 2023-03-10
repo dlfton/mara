@@ -35,4 +35,8 @@ class HomeController extends Controller
     {
         return view('frontend.view', ['item' => $item]);
     }
+    public function cartMember()
+    {
+        return view('frontend.cart');
+    }
 }

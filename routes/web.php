@@ -29,6 +29,8 @@ Auth::routes();
 // user route
 Route::middleware(['auth', 'user-role:user'])->group(function () {
     Route::get("/member/home", [HomeController::class, 'userHome'])->name('home.member');
+
+    Route::get("/member/cart", [HomeController::class, 'cartMember'])->name('cart.member');
 });
 
 // admin route
