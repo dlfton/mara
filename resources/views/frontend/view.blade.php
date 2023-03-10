@@ -17,8 +17,14 @@
                         <p>Serial : {{ $item->anime }}</p>
                         <p>kategori : {{ $item->kategori->kategori_id }}</p>
                         <p>jumlah : {{ $item->jumlah }}</p>
-                        <button>Pre-Order</button>
-                        <button>Cart</button>
+                        @guest
+                        @if (Route::has('login'))
+                        <a class="btn btn-primary" href="{{ Route('login') }}">Pre-Order</a>
+                        @endif
+                        @else
+                        <a class="btn btn-primary" href="{{ Route('login') }}">Pre-Order</a>
+                        <a class="btn btn-outline-dark">Cart</a>
+                        @endguest
                     </form>
                 </div>
             </div>

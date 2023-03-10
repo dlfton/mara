@@ -45,7 +45,7 @@
         </section>
 
         {{-- section barang --}}
-        <livewire:guest.page />
+        <livewire:member.page />
 
         {{-- section footer --}}
         <section id="ftr">

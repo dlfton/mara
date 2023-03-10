@@ -11,9 +11,16 @@ class Page extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
+
+    public $search = '';
+
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
     public function render()
     {
-        $data = Barang::orderBy('id', 'ASC')->paginate('10');
+        $data = Barang::orderBy('id', 'ASC')->where('nama', 'like', '%'.$this->search.'%')->paginate('10');
         return view('livewire.member.page',['barang'=>$data]);
     }
 }
