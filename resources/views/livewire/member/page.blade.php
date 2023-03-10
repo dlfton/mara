@@ -21,6 +21,7 @@
                         <p>{{ $item->estimasi }}</p>
                         <div class="d-grid gap-2">
                             <a href="{{ url('product/'. $item->id) }}" class="btn btn-primary text-white">Pre-Order</a>
+                            <a href="#" class="btn btn-outline-primary text-dark"><i class="ri-shopping-cart-line"></i> Cart</a>
                         </div>
                         {{-- </div> --}}
                     </div>
