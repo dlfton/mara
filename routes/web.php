@@ -3,7 +3,7 @@
 use App\Http\Controllers\admin\barangController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\admin\CategoryController;
-use App\Http\Controllers\admin\preorderController;
+use App\Http\Controllers\admin\orderController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -62,7 +62,7 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     Route::get('/admin/preorder', [preorderController::class, 'index_preorder'])->name('preoder.admin');
 
     // request-order
-    
+
 
 
     // category
