@@ -9,8 +9,8 @@
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="{{ route('account.member') }}">Change Profile</a></li>
-                        <li class="list-group-item"><a href="{{ route('password.member') }}">Change Password</a></li>
+                        <li class="list-group-item {{ Request::is('member/account') ? 'active' : '' }}"><a href="{{ route('account.member') }}" class="{{ Request::is('member/account') ? 'text-white' : '' }}">Change Profile</a></li>
+                        <li class="list-group-item {{ Request::is('member/password') ? 'active' : '' }}"><a href="{{ route('password.member') }}" class="{{ Request::is('member/password') ? 'text-white' : '' }}">Change Password</a></li>
                     </ul>
                 </div>
             </div>
