@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\barangController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\preorderController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -56,6 +57,13 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     Route::post("admin/home", [barangController::class, 'add']);
     Route::put('admin/{item}', [barangController::class, 'update']);
     Route::delete('admin/{item}',[barangController::class, 'destroy']);
+
+    // pre-order
+    Route::get('/admin/preorder', [preorderController::class, 'index_preorder'])->name('preoder.admin');
+
+    // request-order
+    
+
 
     // category
     // Route::get("kategori/admin", [CategoryController::class, 'index'])->name('kategori.admin');
