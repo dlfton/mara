@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\barangController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\orderController;
+use App\Http\Controllers\admin\profileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -60,11 +61,12 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
 
     // pre-order
     Route::get('/admin/preorder', [orderController::class, 'index_preorder'])->name('preoder.admin');
+    
+    // request-order
     Route::get('/admin/request', [orderController::class, 'index_request'])->name('request.admin');
 
-    // request-order
-
-
+    // profile
+    Route::get('/admin/profile', [profileController::class, 'index'])->name('admin.profile');
 
     // category
     // Route::get("kategori/admin", [CategoryController::class, 'index'])->name('kategori.admin');
