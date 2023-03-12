@@ -221,7 +221,8 @@
                 <ul class="app-menu list-unstyled accordion" id="menu-accordion">
                     <li class="nav-item">
                         <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                        <a class="nav-link {{ Request::is('admin/home') ? 'active' : '' }}" href="{{ route('home.admin') }}">
+                        <a class="nav-link {{ Request::is('admin/home') ? 'active' : '' }}"
+                            href="{{ route('home.admin') }}">
                             <span class="nav-icon">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-folder"
                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -237,10 +238,9 @@
                     </li>
                     <li class="nav-item has-submenu">
                         <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                        <a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse"
-                            data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
+                        <a class="nav-link submenu-toggle {{ Request::is('admin/preorder', 'admin/request') ? 'active' : '' }}" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#submenu-1" aria-expanded="true" aria-controls="submenu-1">
                             <span class="nav-icon">
-                                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list"
                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -252,9 +252,9 @@
                                     <circle cx="3.5" cy="10.5" r=".5" />
                                 </svg>
                             </span>
-                            <span class="nav-link-text">Orders</span>
+                            <span class="nav-link-text">Order</span>
                             <span class="submenu-arrow">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files"
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
@@ -263,14 +263,15 @@
                             <!--//submenu-arrow-->
                         </a>
                         <!--//nav-link-->
-                        <div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
+                        <div id="submenu-1" class="collapse submenu submenu-1 {{ Request::is('admin/home') ? '' : 'show' }}" data-bs-parent="#menu-accordion">
                             <ul class="submenu-list list-unstyled">
-                                <li class="submenu-item"><a class="submenu-link" href="{{ route('preoder.admin') }}">Pre-Order</a></li>
-                                <li class="submenu-item"><a class="submenu-link" href="#">Request Order</a></li>
-                                {{-- <li class="submenu-item"><a class="submenu-link" href="settings.html">Settings</a></li> --}}
+                                <li class="submenu-item"><a class="submenu-link {{ Request::is('admin/preorder') ? 'active' : '' }}" href="{{ route('preoder.admin') }}">Pre Order</a></li>
+                                <li class="submenu-item"><a class="submenu-link {{ Request::is('admin/request') ? 'active' : '' }}" href="{{ route('request.admin') }}">Request Order</a></li>
+
                             </ul>
                         </div>
                     </li>
+                    <!--//nav-item-->
                     <!--//nav-item-->
                     {{-- <li class="nav-item has-submenu">
                         <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -310,18 +311,17 @@
 
                     <li class="nav-item">
                         <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                        <a class="nav-link"
-                                href="#">
-                                <span class="nav-icon">
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-person"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M12 1H4a1 1 0 0 0-1 1v10.755S4 11 8 11s5 1.755 5 1.755V2a1 1 0 0 0-1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
-                                        <path fill-rule="evenodd" d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                </span>
-                                <span class="nav-link-text">Profile</span>
-                            </a>
+                        <a class="nav-link" href="#">
+                            <span class="nav-icon">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-person"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M12 1H4a1 1 0 0 0-1 1v10.755S4 11 8 11s5 1.755 5 1.755V2a1 1 0 0 0-1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+                                    <path fill-rule="evenodd" d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg>
+                            </span>
+                            <span class="nav-link-text">Profile</span>
+                        </a>
                         <!--//nav-link-->
                     </li>
                     <!--//nav-item-->

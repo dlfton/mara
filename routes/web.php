@@ -59,7 +59,8 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
     Route::delete('admin/{item}',[barangController::class, 'destroy']);
 
     // pre-order
-    Route::get('/admin/preorder', [preorderController::class, 'index_preorder'])->name('preoder.admin');
+    Route::get('/admin/preorder', [orderController::class, 'index_preorder'])->name('preoder.admin');
+    Route::get('/admin/request', [orderController::class, 'index_request'])->name('request.admin');
 
     // request-order
 
