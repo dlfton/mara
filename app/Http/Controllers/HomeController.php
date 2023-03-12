@@ -7,6 +7,7 @@ use App\Models\admin\Barang;
 use App\Models\admin\Kategori;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
@@ -73,5 +74,26 @@ class HomeController extends Controller
         $user->alamat = $request['alamat'];
         $user->save();
         return back()->with('msg','Profile Updated');
+    }
+    public function password()
+    {
+        return view('frontend.account.pass')->with('user', auth()->user());
+    }
+    public function passwordUpdate(Request $request)
+    {
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required|confirmed',
+        ]);
+
+        if(!Hash::check($request->old_password, auth()->user()->password)){
+            return back()->with("error", "Old Password Doesn't match!");
+        }
+
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+        ]);
+
+        return back()->with("msg", "Password changed successfully!");
     }
 }

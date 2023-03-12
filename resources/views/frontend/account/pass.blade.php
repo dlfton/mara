@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'account')
+@section('title', 'change password')
 
 
 @section('content')
@@ -22,50 +22,41 @@
                                 {{ session('msg') }}
                             </div>
                         @endif
-                        <h1>{{ Auth::user()->name }} Account</h1>
-                        <form action="{{ route('update.member') }}" method="POST" enctype="multipart/form-data"
+                        <h1>Change Password</h1>
+                        <form action="{{ route('update.password.member') }}" method="POST" enctype="multipart/form-data"
                             role="form" novalidate>
                             @csrf
                             @method('PUT')
                             {{-- nama --}}
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="loginName">Nama Lengkap</label>
-                                <input type="text" id="loginName" class="form-control @error('name')is-invalid @enderror"
-                                    name="name" value="{{ old('name', $user->name) }}" required autocomplete="name" />
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <div class="form-outline mb-4 ">
-                                <label class="form-label" for="loginName">Email</label>
-                                <input type="email" id="loginName"
-                                    class="form-control @error('email')is-invalid @enderror" name="email"
-                                    value="{{ old('email', $user->email) }}" required autocomplete="email" />
-                                @error('email')
+                                <label class="form-label" for="loginName">Old Password</label>
+                                <input type="password" id="loginName"
+                                    class="form-control @error('old_password')is-invalid @enderror" name="old_password"
+                                    value="{{ old('old_password') }}" required autocomplete="name" placeholder="old password . . ." />
+                                @error('old_password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="loginName">No. Telpon</label>
-                                <input type="number" id="loginName"
-                                    class="form-control @error('phone')is-invalid @enderror" name="phone"
-                                    value="{{ old('phone', $user->phone) }}" required autocomplete="phone" />
-                                @error('phone')
+                                <label class="form-label" for="loginName">New Password</label>
+                                <input type="password" id="loginName"
+                                    class="form-control @error('new_password')is-invalid @enderror" name="new_password"
+                                    value="{{ old('new_password') }}" required autocomplete="name" placeholder="new password . . ." />
+                                @error('new_password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="loginName">Alamat Lengkap</label>
-                                <input type="text" id="loginName"
-                                    class="form-control @error('alamat')is-invalid @enderror" name="alamat"
-                                    value="{{ old('alamat', $user->alamat) }}" required autocomplete="alamat" />
-                                @error('alamat')
+                                <label class="form-label" for="loginName">Confirm Password</label>
+                                <input type="password" id="loginName"
+                                    class="form-control @error('new_password_confirmation')is-invalid @enderror"
+                                    name="new_password_confirmation" value="{{ old('new_password_confirmation') }}" required
+                                    autocomplete="name" placeholder="confirm password . . ." />
+                                @error('new_password_confirmation')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

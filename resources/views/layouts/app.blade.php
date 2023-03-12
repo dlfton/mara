@@ -84,7 +84,7 @@
                                     <a class="dropdown-item" href="{{ Route('cart.member') }}">
                                         {{ __('Cart') }}
                                     </a>
-                                    <hr>
+                                    <hr class="dropdown-divider">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
