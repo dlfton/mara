@@ -11,4 +11,16 @@ class profileController extends Controller
     {
         return view('admin.profile.index', ['title'=> 'halaman profile']);
     }
+    public function edit()
+    {
+        # code...
+    }
+    public function update()
+    {
+        # code...
+    }
+    public function changePass()
+    {
+        # code...
+    }
 }
