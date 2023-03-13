@@ -39,7 +39,7 @@
             {{-- section req order --}}
             <section id="req">
                 <div class="field p-4">
-                    <h1 class="text-center fw-bold">Item For Request Order</h1>
+                    <h1 class="text-center fw-bold">Item For Pre Order</h1>
 
                 </div>
             </section>
