@@ -22,7 +22,7 @@
                         <a class="btn btn-primary" href="{{ Route('login') }}">Pre-Order</a>
                         @endif
                         @else
-                        <a class="btn btn-primary" href="{{ Route('login') }}">Pre-Order</a>
+                        <a class="btn btn-primary" href="{{ Route('cart.member') }}">Pre-Order</a>
                         <a class="btn btn-outline-dark">Cart</a>
                         @endguest
                     </form>

@@ -28,7 +28,6 @@
                                 @endif
                                 @else
                                 <a href="{{ url('product/' . $item->id) }}" class="btn btn-primary text-white">Pre-Order</a>
-                                <a href="#" class="btn btn-outline-primary text-dark"><i class="ri-shopping-cart-line"></i> Cart</a>
                             @endguest
                         </div>
                         {{-- </div> --}}
