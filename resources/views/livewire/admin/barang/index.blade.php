@@ -1,3 +1,4 @@
+@include('livewire.admin.barang.view')
 <div class="app-wrapper">
     <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
@@ -17,37 +18,40 @@
                     </div>
                 </div>
                 {{-- datatables --}}
-                <table class="table table-bordered table-striped text-center">
+                <table class="table table-bordered table-striped text-center align-items-center">
                     <thead>
                         <tr>
                             <th>NO</th>
-                            <th>Kode Barang</th>
                             <th>Nama Barang</th>
                             <th>Kategori</th>
-                            <th>Jumlah</th>
-                            <th>estimasi Barang</th>
-                            <th>Status Barang</th>
+                            <th>Series</th>
+                            <th>Gambar</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($barang as $item)
-                            <tr>
+                            <tr class="align-middle">
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $item->id }}</td>
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->kategori->kategori_id }}</td>
-                                <td>{{ $item->jumlah }}</td>
-                                <td>{{ $item->estimasi }}</td>
-                                <td>{{ $item->status == '1' ? 'ada' : 'hidden' }}</td>
+                                <td>{{ $item->anime }}</td>
+                                <td><img src="{{ asset('uploads/barang/' . $item->gambar) }}" alt=""
+                                        width="2" height="40" class="card-img-top mb-2 rounded-circle"></td>
                                 <td class="d-flex gap-2 justify-content-center">
-                                    <a href="{{ url('barang/'.$item->id.'/edit') }}" class="btn btn-success">edit</a>
+                                    <a href="{{ url('barang/' . $item->id . '/edit') }}" class="text-primary"><i
+                                            class="fas fa-fw fa-pen-to-square"></i></a>
                                     {{-- <a href="" class="btn btn-danger">delete</a> --}}
-                                    <form action="{{ url('admin/'.$item->id) }}" method="post">
+                                    |
+                                    <form action="{{ url('admin/' . $item->id) }}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="text-primary border-0"><i
+                                                class="fas fa-fw fa-trash"></i></button>
                                     </form>
+                                    |
+                                    <button type="button" class="text-primary border-0" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                        wire:click="viewBarang({{$item->id}})"><i class="fas fa-eye"></i></button>
                                 </td>
                             </tr>
                         @endforeach

@@ -151,7 +151,8 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="d-grid col-12 justify-content-md-end">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a href="{{ url()->previous() }}" class="btn btn-outline-danger">cancel</a>
                                 <button type="submit" class="btn btn-primary">update</button>
                             </div>
                         </div>
