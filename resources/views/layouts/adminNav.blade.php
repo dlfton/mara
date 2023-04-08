@@ -219,8 +219,9 @@
                 <ul class="app-menu list-unstyled accordion" id="menu-accordion">
                     <li class="nav-item has-submenu">
                         <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                        <a class="nav-link submenu-toggle {{ Request::is('admin/home') ? 'active' : '' }}" href="#" data-bs-toggle="collapse"
-                            data-bs-target="#submenu-1" aria-expanded="true" aria-controls="submenu-1">
+                        <a class="nav-link submenu-toggle {{ Request::is('admin/home') ? 'active' : '' }}"
+                            href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="true"
+                            aria-controls="submenu-1">
                             <span class="nav-icon">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-folder"
                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -249,8 +250,8 @@
                                         class="submenu-link {{ Request::is('admin/home') ? 'active' : '' }}"
                                         href="{{ route('home.admin') }}">Barang</a></li>
                                 <li class="submenu-item"><a
-                                        class="submenu-link {{ Request::is('admin/request') ? 'active' : '' }}"
-                                        href="{{ route('request.admin') }}">Kategori</a></li>
+                                        class="submenu-link {{ Request::is('admin/kategori') ? 'active' : '' }}"
+                                        href="{{ route('kategori.master') }}">Kategori</a></li>
                                 <li class="submenu-item"><a
                                         class="submenu-link {{ Request::is('admin/request') ? 'active' : '' }}"
                                         href="{{ route('request.admin') }}">Member</a></li>
@@ -261,8 +262,8 @@
                     <li class="nav-item has-submenu">
                         <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                         <a class="nav-link submenu-toggle {{ Request::is('admin/preorder', 'admin/request') ? 'active' : '' }}"
-                            href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1"
-                            aria-expanded="true" aria-controls="submenu-1">
+                            href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="true"
+                            aria-controls="submenu-1">
                             <span class="nav-icon">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list"
                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">

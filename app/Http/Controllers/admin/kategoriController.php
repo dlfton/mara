@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class kategoriController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('admin.kategori.index', ['title'=>'halaman kategori']);
+    }
 }
