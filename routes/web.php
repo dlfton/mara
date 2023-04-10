@@ -64,6 +64,7 @@ Route::middleware(['auth', 'user-role:admin'])->group(function () {
 
     // kategori
     Route::get('/admin/kategori', [kategoriController::class, 'index'])->name('kategori.master');
+    // Route::get('/admin/kategori', [kategoriController::class, 'tambah_kategori'])->name('kategori.tambah');
 
     // pre-order
     Route::get('/admin/preorder', [orderController::class, 'index_preorder'])->name('preoder.admin');

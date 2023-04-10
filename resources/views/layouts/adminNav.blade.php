@@ -219,7 +219,7 @@
                 <ul class="app-menu list-unstyled accordion" id="menu-accordion">
                     <li class="nav-item has-submenu">
                         <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                        <a class="nav-link submenu-toggle {{ Request::is('admin/home') ? 'active' : '' }}"
+                        <a class="nav-link submenu-toggle {{ Request::is('admin/home') ? 'collapsed' : '' }}"
                             href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="true"
                             aria-controls="submenu-1">
                             <span class="nav-icon">
@@ -262,8 +262,8 @@
                     <li class="nav-item has-submenu">
                         <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                         <a class="nav-link submenu-toggle {{ Request::is('admin/preorder', 'admin/request') ? 'active' : '' }}"
-                            href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="true"
-                            aria-controls="submenu-1">
+                            href="#" data-bs-toggle="collapse" data-bs-target="#submenu-2" aria-expanded="true"
+                            aria-controls="submenu-2">
                             <span class="nav-icon">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list"
                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -287,8 +287,8 @@
                             <!--//submenu-arrow-->
                         </a>
                         <!--//nav-link-->
-                        <div id="submenu-1"
-                            class="collapse submenu submenu-1 {{ Request::is('admin/home') ? '' : 'show' }}"
+                        <div id="submenu-2"
+                            class="collapse submenu submenu-2 {{ Request::is('admin/preorder') ? '' : 'hide' }}"
                             data-bs-parent="#menu-accordion">
                             <ul class="submenu-list list-unstyled">
                                 <li class="submenu-item"><a
