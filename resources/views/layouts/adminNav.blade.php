@@ -253,7 +253,8 @@
                                         class="submenu-link {{ Request::is('admin/kategori') ? 'active' : '' }}"
                                         href="{{ route('kategori.master') }}">Kategori</a></li>
                                 <li class="submenu-item"><a
-                                        class="submenu-link {{ Request::is('admin/request') ? 'active' : '' }}"
+                                        class="submenu-link"
+                                        {{-- {{ Request::is('admin/request') ? 'active' : '' }} --}}
                                         href="{{ route('request.admin') }}">Member</a></li>
 
                             </ul>
