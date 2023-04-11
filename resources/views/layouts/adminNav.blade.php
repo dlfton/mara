@@ -243,7 +243,7 @@
                         </a>
                         <!--//nav-link-->
                         <div id="submenu-1"
-                            class="collapse submenu submenu-1 {{ Request::is('admin/home') ? '' : 'show' }}"
+                            class="collapse submenu submenu-1 {{ Request::is('admin/home','admin/kategori') ? 'show' : '' }}"
                             data-bs-parent="#menu-accordion">
                             <ul class="submenu-list list-unstyled">
                                 <li class="submenu-item"><a
@@ -289,7 +289,7 @@
                         </a>
                         <!--//nav-link-->
                         <div id="submenu-2"
-                            class="collapse submenu submenu-2 {{ Request::is('admin/preorder') ? '' : 'hide' }}"
+                            class="collapse submenu submenu-2 {{ Request::is('admin/preorder','admin/request') ? 'show' : '' }}"
                             data-bs-parent="#menu-accordion">
                             <ul class="submenu-list list-unstyled">
                                 <li class="submenu-item"><a
