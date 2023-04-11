@@ -46,7 +46,7 @@ class HomeController extends Controller
     // cart
     public function cartMember()
     {
-        return view('frontend.cart.cart');
+        return view('livewire.member.cart');
     }
 
     // transaksi

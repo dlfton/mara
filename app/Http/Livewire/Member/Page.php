@@ -23,4 +23,8 @@ class Page extends Component
         $data = Barang::orderBy('id', 'ASC')->where('nama', 'like', '%'.$this->search.'%')->paginate('10');
         return view('livewire.member.page',['barang'=>$data]);
     }
+    public function addcart($barangId)
+    {
+        
+    }
 }
