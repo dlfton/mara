@@ -3,13 +3,31 @@
 @section('title', 'cart')
 
 @section('content')
-    @livewireScripts
+<div>
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="fw-bold">Checkout Item</h1>
+                        <h1 class="fw-bold">Checkout Item Livewire</h1>
+                    </div>
+                    <div class="card-item">
+
+                        <table class="table table-striped-columns">
+                            <thead>
+                                <th>No</th>
+                                <th>Gambar</th>
+                                <th>Nama Barang</th>
+                                <th>Kategori</th>
+                                <th>Quantity</th>
+                                <th>Harga</th>
+                                <th>Jumlah</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -57,7 +75,7 @@
                                 <input type="file" id="formFileMultiple"
                                     class="form-control @error('xxx')is-invalid @enderror" name="xxx"
                                     value="{{ old('xxx') }}" required autocomplete="xxx" />
-                                    <div id="emailHelp" class="form-text">Format (JPEG, PNG)</div>
+                                <div id="emailHelp" class="form-text">Format (JPEG, PNG)</div>
                                 @error('xxx')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -73,5 +91,6 @@
             </div>
         </div>
     </div>
-    @livewireScripts
+</div>
+
 @endsection
