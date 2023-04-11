@@ -6,6 +6,7 @@ use App\Http\Requests\userForm;
 use App\Models\admin\Barang;
 use App\Models\admin\Kategori;
 use App\Models\User;
+use Dotenv\Util\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -41,7 +42,6 @@ class HomeController extends Controller
     {
         return view('frontend.view', ['item' => $item]);
     }
-
 
     // cart
     public function cartMember()
