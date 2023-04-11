@@ -9,10 +9,10 @@
                 </div>
                 <div class="col-md-6 align-self-top">
                     <form action="">
-                        <h2>{{ $item->nama }}</h2>
-                        <h2>{{ $item->harga }}</h2>
-                        <h2>Spesifikasi</h2>
-                        <h4>{{ $item->desc }}</h4>
+                        <h1 class="fw-bold text-primary mb-2">{{ $item->nama }}</h1>
+                        <h3>IDR {{ $item->harga }}</h3>
+                        <h4>Spesifikasi</h4>
+                        <h6>{{ $item->desc }}</h6>
                         <h2>informasi</h2>
                         <p>Serial : {{ $item->anime }}</p>
                         <p>kategori : {{ $item->kategori->kategori_id }}</p>

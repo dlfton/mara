@@ -17,10 +17,10 @@
                         <img src="{{ asset('uploads/barang/' . $item->gambar) }}" alt="" width="50"
                             height="200" class="card-img-top mb-2">
                         {{-- <div class="card-body"> --}}
-                        <h3 class="fw-bold">{{ $item->nama }}</h3>
-                        <p>IDR. {{ $item->harga }}</p>
-                        <p>Jumlah: {{ $item->jumlah }}</p>
-                        <p>{{ $item->estimasi }}</p>
+                        <p class="text-small mb-0">Anime: {{ $item->anime }}</p>
+                        <h2 class="fw-bolder">{{ $item->nama }}</h2>
+                        <p class="text-primary fw-bold">IDR. {{ $item->harga }}.000,00</p>
+                        <p class="fw-bold">batas terakhir PO: {{ date('d-m-Y', strtotime($item->estimasi)); }}</p>
                         <div class="d-grid gap-2">
                             @guest
                                 @if (Route::has('login'))
