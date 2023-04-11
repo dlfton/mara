@@ -23,7 +23,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="disabledTextInput" class="form-label">gambar</label>
-                        <img src="{{ asset('uploads/barang/'. 'wire:model="nama"') }}" alt="" width="20" height="200"
+                        <img src="{{ asset('uploads/barang/'. 'wire:model="nama"') }}" alt="" width="200" height="200"
                             class="card-img-top mb-2">
                     </div>
                     <div class="mb-3">

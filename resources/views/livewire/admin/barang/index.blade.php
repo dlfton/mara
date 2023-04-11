@@ -36,9 +36,8 @@
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->kategori->kategori_id }}</td>
                                 <td>{{ $item->anime }}</td>
-                                <td><img src="{{ asset('uploads/barang/' . $item->gambar) }}" alt=""
-                                        width="2" height="40" class="card-img-top mb-2 rounded-circle"></td>
-                                <td class="d-flex gap-2 justify-content-center">
+                                <td><img src="{{ asset('uploads/barang/' . $item->gambar) }}" alt="" width="40" height="40" class="img-fluid rounded-circle"></td>
+                                <td class="d-flex justify-content-center">
                                     <a href="{{ url('barang/' . $item->id . '/edit') }}" class="text-primary"><i
                                             class="fas fa-fw fa-pen-to-square"></i></a>
                                     {{-- <a href="" class="btn btn-danger">delete</a> --}}
@@ -68,47 +67,49 @@
 </div>
 
 @foreach ($barang as $data)
-<!-- Modal -->
-<div class="modal fade" id="exampleModal-{{ $data->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Barang Detail</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <fieldset disabled="disabled">
-                    <div class="mb-3">
-                        <label for="disabledTextInput" class="form-label">nama
-                            barang</label>
-                        <input type="text" id="disabledTextInput" class="form-control" value="{{ $data->nama }}"
-                            placeholder="Disabled input">
-                    </div>
-                    <div class="mb-3">
-                        <label for="disabledTextInput" class="form-label">kategori</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input"
-                            value="{{ $data->kategori->kategori_id }}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="disabledTextInput" class="form-label">series</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input"
-                            value="{{ $data->anime }}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="disabledTextInput" class="form-label">gambar</label><br>
-                        <img src="{{ asset('uploads/barang/' . $data->gambar) }}" alt="" width="400" height="400" class="img-fluid mb-2">
-                    </div>
-                    <div class="mb-3">
-                        <label for="disabledTextInput" class="form-label">deskripsi</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input"
-                            value="{{ $data->desc }}">
-                    </div>
-                </fieldset>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal-{{ $data->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Barang Detail</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <fieldset disabled="disabled">
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">nama
+                                barang</label>
+                            <input type="text" id="disabledTextInput" class="form-control"
+                                value="{{ $data->nama }}" placeholder="Disabled input">
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">kategori</label>
+                            <input type="text" id="disabledTextInput" class="form-control"
+                                placeholder="Disabled input" value="{{ $data->kategori->kategori_id }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">series</label>
+                            <input type="text" id="disabledTextInput" class="form-control"
+                                placeholder="Disabled input" value="{{ $data->anime }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">gambar</label><br>
+                            <img src="{{ asset('uploads/barang/' . $data->gambar) }}" alt="" width="400"
+                                height="400" class="img-fluid mb-2">
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">deskripsi</label>
+                            <input type="text" id="disabledTextInput" class="form-control"
+                                placeholder="Disabled input" value="{{ $data->desc }}">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 @endforeach
