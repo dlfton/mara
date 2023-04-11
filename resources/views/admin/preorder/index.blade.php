@@ -28,7 +28,7 @@
 <body class="app">
     @include('layouts.adminNav')
     {{-- content --}}
-    
+    <livewire:admin.preorder.index />
     @include('layouts.adminFooter')
     @livewireScripts
 </body>
