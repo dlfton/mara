@@ -13,13 +13,13 @@ class Index extends Component
     public $code, $user_id, $barang_id, $status, $po, $quantity, $bukti, $po_id;
 
     protected $rules = [
-        'code' => '',
-        'user_id' => '',
-        'barang_id' => '',
-        'status' => '',
-        'po' => '',
-        'quantity' => '',
-        'bukti' => '',
+        'code' => 'required',
+        'user_id' => 'required',
+        'barang_id' => 'required',
+        'status' => 'required',
+        'po' => 'required',
+        'quantity' => 'required',
+        'bukti' => 'required',
     ];
     public function render()
     {
